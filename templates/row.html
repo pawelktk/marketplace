@@ -1,0 +1,17 @@
+<tr id="datarow-{{.Id}}" class="border-b dark:border-neutral-500">
+  <td class="whitespace-nowrap px-6 py-4">{{.Id}}</td>
+  <td class="whitespace-nowrap px-6 py-4">{{.Name}}</td>
+  <td class="whitespace-nowrap px-6 py-4">{{.Description}}</td>
+  <td class="whitespace-nowrap px-6 py-4">{{.Stock}}</td>
+  <td class="whitespace-nowrap px-6 py-4">{{.Price}}</td>
+  <td class="whitespace-nowrap px-1 py-1">
+    <a hx-get="/products/edit/{{.Id}}" hx-target="#datarow-{{.Id}}" hx-swap="outerHTML" hx-indicator="#processing"
+      class="hover:underline text-blue-700" href="">
+      Edit
+    </a>
+  </td>
+  <!--<td class="whitespace-nowrap px-1 py-1">
+    <a hx-delete="/products/{{.Id}}" hx-target="#products" hx-confirm="Are you sure you want to delete {{.Name}}?"
+      hx-indicator="#processing" class="hover:underline text-blue-700" href="">Delete</a>
+</td>-->
+</tr>
