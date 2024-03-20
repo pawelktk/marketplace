@@ -5,12 +5,14 @@ Marketplace REST API can be built as a Docker container. To build the server onl
 ## Build and run the server in a Docker container
 
 ```sh
+git clone https://github.com/pawelktk/marketplace.git
+cd marketplace
 docker compose up --build
 ```
 
 ## Storage
 
-The database is stored persistently in "pgdata" Docker volume. To remove the volume(eg. for testing):
+The database is stored persistently in "pgdata" Docker volume. To remove the volume:
 
 ```sh
 docker compose down
